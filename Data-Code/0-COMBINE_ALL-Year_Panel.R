@@ -38,10 +38,9 @@ chars_mcaid <- left_join(df_hosp_chars, df_mcaid_annual, by = c("year" = "year",
          valid_uncomp = ifelse(uncomp_care >= quantile(uncomp_care, 0.05, na.rm=T) & uncomp_care <= quantile(uncomp_care, 0.95,na.rm=T,), 1, 0),
          valid_uncomp = ifelse(is.na(uncomp_care), 0, 1), 
          uncomp_care = uncomp_care/(1000),
-         net_pat_rev = (net_pat_rev)/cpi,
+         net_pat_rev = (net_pat_rev/admtot)/cpi,
          valid_pat_rev = ifelse(net_pat_rev >= quantile(net_pat_rev, 0.05, na.rm=T) & net_pat_rev <= quantile(net_pat_rev, 0.95,na.rm=T,), 1, 0),
-         valid_pat_rev = ifelse(is.na(net_pat_rev), 0, 1), 
-         net_pat_rev = net_pat_rev/1000) %>% 
+         valid_pat_rev = ifelse(is.na(net_pat_rev), 0, 1)) %>% 
   filter(valid_uncomp==1 & valid_pat_rev==1)
 
 

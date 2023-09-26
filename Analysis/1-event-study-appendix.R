@@ -1,5 +1,5 @@
 
-# event study estimates -- main text --------------------------------------
+# event study estimates -- appendix --------------------------------------
 
 # clear
 rm(list=ls())
@@ -11,7 +11,6 @@ pacman::p_load(tidyverse, dplyr, lubridate, zoo, DescTools, psych, here, janitor
 
 # path to overleaf folder for output of code
 results.path <- "/Users/kaylynsanbower/Dropbox/Apps/Overleaf/Hospital Amenities (2023)/Tables_and_Figures/"
-
 
 # Event study with hospital wide outcomes  --------------------------------
 
@@ -62,14 +61,14 @@ sa_mcddc_covs <- feols(mcddc ~ sunab(exp_year, year) +
 summary(sa_mcddc_covs)
 
 
-tikz(file = paste(results.path, "sa_mcddc_results.tex", sep=""), width = 7, height = 5)
-iplot(list(sa_mcddc, sa_mcddc_covs), sep = 0.15, ref.line = -1,
+tikz(file = paste(results.path, "mcddc_results.tex", sep=""), width = 7, height = 5)
+iplot(list(twfe_mcddc, twfe_mcddc_covs, sa_mcddc, sa_mcddc_covs), sep = 0.15, ref.line = -1,
       xlab = 'Time to treatment',
       ylab = 'Estimates',
       main = "", 
-      col=c(1,4)) 
-legend("top",  col = c(1, 4), pch = c(20, 17), horiz = T, xpd = T, inset = c(0, -0.1),
-       legend = c( "SA", "SA +"), cex = 0.75)
+      col=c(1,2,3,4)) 
+legend("top",  col = c(1,2,3,4), pch = c(20, 17, 15, 1), horiz = T, xpd = T, inset = c(0, -.15),
+       legend = c( "TWFE", "TWFE +", "SA", "SA +"), cex = 0.75, y.intersp = 1.5, text.width = 1.25) 
 dev.off()
 
 
@@ -113,14 +112,14 @@ sa_covs <- feols(uncomp_care ~ sunab(exp_year, year) +
 summary(sa_covs)
 
 
-tikz(file = paste(results.path, "sa_uncomp_care_results.tex", sep=""), width = 7, height = 5)
-iplot(list(sa, sa_covs), sep = 0.15, ref.line = -1,
+tikz(file = paste(results.path, "uncomp_care_results.tex", sep=""), width = 7, height = 5)
+iplot(list(twfe, twfe_covs, sa, sa_covs), sep = 0.15, ref.line = -1,
       xlab = 'Time to treatment',
       ylab = 'Estimates',
       main = "", 
-      col=c(1,4)) 
-legend("top",  col = c(1, 4), pch = c(20, 17), horiz = T, xpd = T, inset = c(0, -0.1),
-       legend = c( "SA", "SA +"), cex = 0.75)
+      col=c(1,2,3,4)) 
+legend("top",  col = c(1,2,3,4), pch = c(20, 17, 15, 1), horiz = T, xpd = T, inset = c(0, -.15),
+       legend = c( "TWFE", "TWFE +", "SA", "SA +"), cex = 0.75, y.intersp = 1.5, text.width = 1.25) 
 dev.off()
 
 
@@ -165,28 +164,25 @@ sa_covs <- feols(net_pat_rev ~ sunab(exp_year, year) +
 summary(sa_covs)
 
 
-tikz(file = paste(results.path, "sa_net_pat_rev_results.tex", sep=""), width = 7, height = 5)
-iplot(list(sa, sa_covs), sep = 0.15, ref.line = -1,
+tikz(file = paste(results.path, "net_pat_rev_results.tex", sep=""), width = 7, height = 5)
+iplot(list(twfe, twfe_covs, sa, sa_covs), sep = 0.15, ref.line = -1,
       xlab = 'Time to treatment',
       ylab = 'Estimates',
       main = "", 
-      col=c(1,4)) 
-legend("top",  col = c(1, 4), pch = c(20, 17), horiz = T, xpd = T, inset = c(0, -0.1),
-       legend = c( "SA", "SA +"), cex = 0.75)
+      col=c(1,2,3,4)) 
+legend("top",  col = c(1,2,3,4), pch = c(20, 17, 15, 1), horiz = T, xpd = T, inset = c(0, -.15),
+       legend = c( "TWFE", "TWFE +", "SA", "SA +"), cex = 0.75, y.intersp = 1.5, text.width = 1.25) 
 dev.off()
 
 
 
+
 # Import data  ------------------------------------------------------------
-df <- read_rds("data/combined-hospital-variables-cs-yelp.rds") %>% clean_names() %>% arrange(mcrnum, year) %>% 
+df <- read_rds("data/output/combined-hospital-variables-cs-yelp.rds") %>% clean_names() %>% arrange(mcrnum, year) %>% 
       mutate(time_to_treat = ifelse(mcaid_expansion==1, year - exp_year, 0), 
              exp_year = ifelse(is.na(exp_year), 0, exp_year)) %>% 
       filter(time_to_treat > -4) %>% group_by(mcrnum) %>% mutate(first_rev = min(year)) %>% 
-  filter(first_rev ==2012)
-
-# # create list of hospitals to include in sample to compare topic models and export
-# df_sample <- df %>% subset(select=c(mcrnum, year, mcaid_expansion, time_to_treat, exp_year)) %>% unique() %>% 
-#   write_csv(file = "~/Dropbox/research-projects/hospital-amenities-nlp/Data/Yelp/Input/sa_hosp_samp.csv")
+  filter(first_rev==2012)
 
 
 #--Net Patient Revenue
@@ -229,15 +225,14 @@ sa_covs <- feols(rating ~ sunab(exp_year, year) +
 summary(sa_covs)
 
 
-tikz(file = paste(results.path, "sa_ratings_results.tex", sep=""), width = 7, height = 5)
-iplot(list(sa, sa_covs), sep = 0.15, ref.line = -1,
+tikz(file = paste(results.path, "ratings_results.tex", sep=""), width = 7, height = 5)
+iplot(list(twfe, twfe_covs, sa, sa_covs), sep = 0.15, ref.line = -1,
       xlab = 'Time to treatment',
       ylab = 'Estimates',
       main = "", 
-      col=c(1,4)) 
-legend("top",  col = c(1, 4), pch = c(20, 17), horiz = T, xpd = T, inset = c(0, -0.1),
-       legend = c( "SA", "SA +"), cex = 0.75)
+      col=c(1,2,3,4)) 
+legend("top",  col = c(1,2,3,4), pch = c(20, 17, 15, 1), horiz = T, xpd = T, inset = c(0, -.15),
+       legend = c( "TWFE", "TWFE +", "SA", "SA +"), cex = 0.75, y.intersp = 1.5, text.width = 1.25) 
 dev.off()
-
 
 

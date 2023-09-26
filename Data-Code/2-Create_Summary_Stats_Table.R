@@ -16,7 +16,7 @@ datasets = list("Hosptial Characteristics" = df_pre_treat_chars)
 variables = list(c("bdtot", "admtot", "ipdtot", "Government", "Nonprofit", "Teaching_Hospital1", "Teaching_Hospital2", "System",  "Labor_Phys", "Labor_Nurse",
                    "mcddc", "uncomp_care", "net_pat_rev"))
 labels = list(c("Total Beds", "Total Admissions", "Total Inpatient Discharges", "Government", "Non-profit", "Major Teaching Hospital", "Any Teaching Hospital", 
-                "System Member", "Physicians", "Nurses", "Medicaid Discharges", "Uncompensated Care (1,000s)", "Net Patient Revenue (1,000s)"))
+                "System Member", "Physicians", "Nurses", "Medicaid Discharges", "Uncompensated Care (1,000s)", "Net Patient Revenue per Admission"))
 colnames =  c("Mean", "St. Dev.")
 
 # descriptive function
