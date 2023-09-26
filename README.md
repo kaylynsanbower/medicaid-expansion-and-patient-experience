@@ -13,4 +13,4 @@ All of the data in the "Input" folder is the *output* of other repositories that
 
 ## Analysis 
 1. [1-event-study.R]
-2. [2-event-study-text-outcomes.R] - This file creates Figure 6 and uses as outcomes outputs from the python text analysis code. 
+2. [2-event-study-text-outcomes.R] - This file creates Figure 6 and uses as outcomes outputs from the python text analysis code. *-I am still working on getting the python code here, so there's an input in this file that isn't yet created in the repo.*-
