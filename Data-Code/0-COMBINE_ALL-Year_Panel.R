@@ -38,9 +38,10 @@ chars_mcaid <- left_join(df_hosp_chars, df_mcaid_annual, by = c("year" = "year",
          valid_uncomp = ifelse(uncomp_care >= quantile(uncomp_care, 0.05, na.rm=T) & uncomp_care <= quantile(uncomp_care, 0.95,na.rm=T,), 1, 0),
          valid_uncomp = ifelse(is.na(uncomp_care), 0, 1), 
          uncomp_care = uncomp_care/(1000),
-         net_pat_rev = (net_pat_rev/admtot)/cpi,
+         net_pat_rev = (net_pat_rev)/cpi,
          valid_pat_rev = ifelse(net_pat_rev >= quantile(net_pat_rev, 0.05, na.rm=T) & net_pat_rev <= quantile(net_pat_rev, 0.95,na.rm=T,), 1, 0),
-         valid_pat_rev = ifelse(is.na(net_pat_rev), 0, 1)) %>% 
+         valid_pat_rev = ifelse(is.na(net_pat_rev), 0, 1), 
+         net_pat_rev = net_pat_rev/1000) %>% 
   filter(valid_uncomp==1 & valid_pat_rev==1)
 
 
@@ -95,12 +96,7 @@ yelp_panel <- left_join(df_export, df_hosp_revs_year, by = c("mcrnum" = "mcrnum"
 write_rds(yelp_panel, file = "data/output/combined-hospital-variables-panel-yelp.rds")
 
 
-# only keep hospitals that have data for uncompensated care
-all_data <- all_data %>% ungroup() %>%
-            mutate(valid_uncomp = ifelse(uncomp_care >= quantile(uncomp_care, 0.05, na.rm=T) & uncomp_care <= quantile(uncomp_care, 0.95,na.rm=T,), 1, 0),
-                   valid_uncomp = ifelse(is.na(uncomp_care), 0, 1), 
-                   uncomp_care = uncomp_care/1000)
 
-write_rds(all_data, file = "data/combined-hospital-variables-panel-uncomp.rds")
-
-
+# Summarize Data  ---------------------------------------------------------
+# Use the data that are loaded here to create table
+source(here("Data-Code/2-Create_Summary_Stats_Table.R"))
