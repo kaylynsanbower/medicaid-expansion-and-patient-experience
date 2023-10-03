@@ -3,10 +3,10 @@ This repo provides the back up for my paper (joint with Ian McCarthy) titled "Me
 
 ## Data
 All of the data in the "Input" folder is the *output* of other repositories that clean the raw data of a given source. 
-- (AHA)[https://github.com/imccart/aha-data]
-- (CMI)[https://github.com/kaylynsanbower/cmi-data]
-- (HCRIS)[https://github.com/imccart/HCRIS]
-- (AHRF)[https://github.com/kaylynsanbower/ahrf-data]
+- [AHA](https://github.com/imccart/aha-data)
+- [CMI](https://github.com/kaylynsanbower/cmi-data)
+- [HCRIS][https://github.com/imccart/HCRIS]
+- [AHRF][https://github.com/kaylynsanbower/ahrf-data]
 - Hospital Compare
 - 
 
