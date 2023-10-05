@@ -1,0 +1,85 @@
+State,Abbreviation,FIPS,Expansion Status,mcaid_expansion,Description,expansion_date,coverage_date
+Alabama,AL,1,Not Adopted,0,,,
+Alaska,AK,2,Adopted and Implemented,1,"Implemented expansion on 9/1/2015
+",9/1/15,
+Arizona,AZ,4,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+Arkansas,AR,5,Adopted and Implemented,1,"Implemented expansion on 1/1/2014 
+",1/1/14,
+California,CA,6,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+Colorado,CO,8,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+Connecticut,CT,9,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+Delaware,DE,10,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+District of Columbia,DC ,11,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+Florida,FL,12,Not Adopted,0,,,
+Georgia,GA,13,Not Adopted,0,,,
+Hawaii,HI,15,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+Idaho,ID,16,Adopted and Implemented,1,Expansion coverage implemented 1/1/2020 (enrollment began 11/1/2019),1/1/20,
+Illinois,IL,17,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+Indiana,IN,18,Adopted and Implemented,1,"Implemented expansion on 2/1/2015
+",2/1/15,
+Iowa,IA,19,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+Kansas,KS,20,Not Adopted,0,,,
+Kentucky,KY,21,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+Louisiana,LA,22,Adopted and Implemented,1,"Implemented expansion on 7/1/2016
+",7/1/16,
+Maine,ME,23,Adopted and Implemented,1,Implemented expansion on 1/10/2019 with coverage retroactive to 7/2/2018,1/10/19,7/2/18
+Maryland,MD,24,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+Massachusetts,MA,25,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+Michigan,MI,26,Adopted and Implemented,1,"Implemented expansion on 4/1/2014
+",4/1/14,
+Minnesota,MN,27,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+Mississippi,MS,28,Not Adopted,0,,,
+Missouri,MO,29,Adopted and Implemented,1,Processing applications beginning 10/1/2021 with coverage retroactive to 7/1/2021,10/1/21,7/1/21
+Montana,MT,30,Adopted and Implemented,1,"Implemented expansion on 1/1/2016
+",1/1/16,
+Nebraska,NE,31,Adopted and Implemented,1,Implemented expansion on 10/1/2020,10/1/20,
+Nevada,NV,32,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+New Hampshire,NH,33,Adopted and Implemented,1,Implemented expansion on 8/15/2014 ,8/15/14,
+New Jersey,NJ,34,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+New Mexico,NM,35,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+New York,NY,36,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+North Carolina,NC,37,Not Adopted,0,,,
+North Dakota,ND,38,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+Ohio,OH,39,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+Oklahoma,OK,40,Adopted and Implemented,1,"Implemented expansion on 7/1/2021
+",7/1/21,
+Oregon,OR,41,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+Pennsylvania,PA,42,Adopted and Implemented,1,"Implemented expansion on 1/1/2015
+",1/1/15,
+Rhode Island,RI,44,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+South Carolina,SC,45,Not Adopted,0,,,
+South Dakota,SD,46,Not Adopted,0,,,
+Tennessee,TN,47,Not Adopted,0,,,
+Texas,TX,48,Not Adopted,0,,,
+Utah,UT,49,Adopted and Implemented,1,Implemented expansion on 1/1/2020,1/1/20,
+Vermont,VT,50,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+Virginia,VA,51,Adopted and Implemented,1,"Expansion coverage implemented 1/1/2019 (enrollment began 11/1/2018)
+",1/1/19,
+Washington,WA,53,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+West Virginia,WV,54,Adopted and Implemented,1,"Implemented expansion on 1/1/2014
+",1/1/14,
+Wisconsin,WI,55,Not Adopted,0,,,
+Wyoming,WY,56,Not Adopted,0,,,
