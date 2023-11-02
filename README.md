@@ -8,7 +8,7 @@ All of the data in the "Input" folder is the *output* of other repositories that
 - [HCRIS](https://github.com/imccart/HCRIS)
 - [AHRF](https://github.com/kaylynsanbower/ahrf-data)
 - Hospital Compare --- need to check where this is coming from and if there is any pre-processing
-- Medicaid expansion -- we constructed the Medicare expansion data file from the [KFF](https://www.kff.org/medicaid/issue-brief/status-of-state-medicaid-expansion-decisions-interactive-map/). 
+- Medicaid expansion -- we constructed the Medicare expansion data file from the [KFF](https://www.kff.org/medicaid/issue-brief/status-of-state-medicaid-expansion-decisions-interactive-map/). This file is included in this repo. 
 - [Yelp](https://github.com/kaylynsanbower/hospital-yelp-data)
 - 
 - 
